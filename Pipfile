@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+filetype = "*"
+websockets = "*"
+pillow = "*"
+pynacl = "*"
+pyjwt = "*"
+cryptography = "*"
+httpx = "*"
+dacite = "*"
+sqlalchemy = "*"
+eth-account = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# temp
+
+mixin_bot_keystore.json
+*.db 
+*local_storage_data
