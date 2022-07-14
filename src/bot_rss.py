@@ -45,9 +45,7 @@ class RssBot:
         if not content:
             return
 
-        cmd = """node D:\Jupyter\quorum-light-node-sdk-to-py\createTrxItemTwo.js {0} "{1}" {2} {3}""".format(
-            RUM_GROUPID, content, pvtkey, RUM_CIPHERKEY
-        )
+        cmd = """node {0} {1} "{2}" {3} {4}""".format(RUM_LIGHT_JS_PATH, RUM_GROUPID, content, pvtkey, RUM_CIPHERKEY)
         nodejs = os.popen(cmd)
         m = nodejs.read()
         nodejs.close()
