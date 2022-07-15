@@ -133,3 +133,5 @@ dmypy.json
 mixin_bot_keystore.json
 *.db 
 *local_storage_data
+src/js/*node_modul*
+src/js/*.json

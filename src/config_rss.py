@@ -28,4 +28,4 @@ RUMPY_PATH = os.path.join(CODE_DIR, "rumpy")
 MIXIN_SDK_PATH = os.path.join(CODE_DIR, "mixin-sdk-python")
 
 MIXIN_KEYSTORE_FILE = os.path.join(BASE_DIR, "mixin_bot_keystore.json")
-RUM_LIGHT_JS_PATH = os.path.join(CODE_DIR, "quorum-light-node-sdk-to-py", "createTrxItemTwo.js")
+RUM_LIGHT_JS_PATH = os.path.join(BASE_DIR, "src", "js", "createTrxItem.js")

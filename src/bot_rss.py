@@ -6,14 +6,12 @@ import re
 import sys
 import time
 
-from config_rss import *
-from modules import *
-
-sys.path.insert(0, RUMPY_PATH)
-import rumpy
 from eth_account import Account
 from eth_utils.hexadecimal import encode_hex
 from rumpy import HttpRequest
+
+from config_rss import *
+from modules import *
 
 logger = logging.getLogger(__name__)
 
@@ -44,8 +42,9 @@ class RssBot:
     def rum_encrypt_data(self, content: str, pvtkey: str) -> str:
         if not content:
             return
+        content = json.dumps(content, ensure_ascii=False)
 
-        cmd = """node {0} {1} "{2}" {3} {4}""".format(RUM_LIGHT_JS_PATH, RUM_GROUPID, content, pvtkey, RUM_CIPHERKEY)
+        cmd = """node {0} {1} {2} {3} {4}""".format(RUM_LIGHT_JS_PATH, RUM_GROUPID, pvtkey, RUM_CIPHERKEY, content)
         nodejs = os.popen(cmd)
         m = nodejs.read()
         nodejs.close()

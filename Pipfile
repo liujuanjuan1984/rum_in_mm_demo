@@ -15,6 +15,7 @@ httpx = "*"
 dacite = "*"
 sqlalchemy = "*"
 eth-account = "*"
+rumpy = "*"
 
 [dev-packages]
 
